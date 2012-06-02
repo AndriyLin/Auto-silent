@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, AutoSilentActivity!</string>
+    <string name="app_name">AutoSilent</string>
+    <string name="info">在桌面添加本程序的Widget即可，    在自动震动状态，将手机翻面即可设成震动状态，方便快捷！</string>
+</resources>

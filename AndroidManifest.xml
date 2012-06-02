@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.andriy.autosilent" android:versionCode="1" android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="8" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+
+	<application android:icon="@drawable/register" android:label="@string/app_name">
+		<activity android:label="@string/app_name" android:name=".AutoSilentActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<receiver android:name=".AutoSilentAppWidgetProvider">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE"></action>
+				<action android:name="com.andriy.autosilent.broadcast"/>
+			</intent-filter>
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/autosilent_widget_info" />
+		</receiver>
+		
+		<service android:enabled="true" android:name=".AutoSilentService">
+			<intent-filter >
+				<action android:name="com.andriy.autoSilentService"/>
+			</intent-filter>
+		</service>
+	</application>
+</manifest>
